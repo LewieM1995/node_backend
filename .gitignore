@@ -1,0 +1,6 @@
+.env
+.pem
+node_modules
+controllers/fujisealControllers/fujiuser/addUser.js
+/misc
+/middleware
