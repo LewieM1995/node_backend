@@ -46,8 +46,6 @@ ACCEPTED_CLIENTS= # comma separated list of accepted clients
     dotenv: ^16.0.3,
     express: ^4.18.2,
     mathjs: ^11.11.1,
-    mongoose: ^7.0.1,
-    morgan: ^1.10.0,
     mysql2: ^3.6.5,
 
 # Built With
