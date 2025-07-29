@@ -1,6 +1,10 @@
 .env
 .pem
 node_modules
-controllers/fujisealControllers/fujiuser/addUser.js
+
 /misc
 /middleware
+websocket.js
+
+controllers/fuji/ticket_system
+controllers/fuji/fujiuser/addUser.js
