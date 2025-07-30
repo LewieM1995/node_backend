@@ -2,9 +2,10 @@
 .pem
 node_modules
 
+controllers/fuji/fujiuser/addUser.js
+
 /misc
 /middleware
 websocket.js
 
 controllers/fuji/ticket_system
-controllers/fuji/fujiuser/addUser.js
