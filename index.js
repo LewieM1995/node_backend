@@ -46,13 +46,14 @@ const dbConnection = (pool) => {
 // Routes using pool1
 app.use("/fujiseal", dbConnection(pool1), fujiRouter);
 //app.use('/test', dbConnection(pool2), fujiRouter);
+app.use("/camera", cameraRouter);
 
 const options = {
         key: fs.readFileSync('/etc/letsencrypt/live/lmappserver.duckdns.org/privkey.pem'),
         cert: fs.readFileSync('/etc/letsencrypt/live/lmappserver.duckdns.org/fullchain.pem')
     }; 
 
-const server = http.createServer(/* options */ app);
+const server = http.createServer(options, app);
 
 //port
 const port = process.env.PORT || 4000;
