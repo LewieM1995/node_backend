@@ -5,6 +5,7 @@ import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import { pool1} from "./database.js";
 import fujiRouter from "./routing/routes.js";
+import cameraRouter from "./routing/cameraRouter.js";
 
 dotenv.config();
 

@@ -51,11 +51,4 @@ fujiRouter.get('/get_closed_tickets', getClosedTickets);
 fujiRouter.post('/getUserForTicketSystem', getUserForTicketSystem);
 */
 
-const cameraRouter = express.Router();
-
-cameraRouter.use((req, res, next) => {
-  res.setHeader("Content-Type", "application/json");
-  next();
-});
-
 export default fujiRouter;
