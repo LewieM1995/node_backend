@@ -17,6 +17,16 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+
+// secret key check
+cameraRouter.use((req, res, next) => {
+  const token = req.headers["x-camera-token"];
+  if (token !== process.env.ESP32_SECRET_KEY) {
+    return res.status(401).json({ message: "Unauthorized: Invalid token" });
+  }
+  next();
+});
+
 cameraRouter.post("/", upload.single("file"), (req, res) => {
   if (!req.file) {
     return res.status(400).json({ message: "No file uploaded" });
