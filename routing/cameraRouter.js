@@ -22,7 +22,10 @@ const upload = multer({ storage });
 cameraRouter.use((req, res, next) => {
   const token = req.headers["x-camera-token"];
   if (token !== process.env.ESP32_SECRET_KEY) {
+    console.log("Unauthorized: Invalid token");
     return res.status(401).json({ message: "Unauthorized: Invalid token" });
+  } else {
+    console.log("Authorized: Valid token");
   }
   next();
 });
